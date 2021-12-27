@@ -312,12 +312,15 @@ body {
    background: #fafafa;
    margin: -161px 0px 0px 0px;
    padding: 211px 0px 80px 0px;
+   @media (max-width: 1100px) {
+      padding: 200px 0px 50px 0px;
+   }
    @media (max-width: 992px) {
-      padding: 190px 0px 40px 0px;
+      padding: 190px 0px 20px 0px;
    }
    //
    @media (max-width: 479px) {
-      padding: 180px 0px 40px 0px;
+      padding: 180px 0px 20px 0px;
    }
    // .advantages__container
 
@@ -396,6 +399,18 @@ body {
    // .practice__container
    background-color: #fafafa;
    padding: 125px 0px 80px 0px;
+   @media (max-width: 1040px) {
+      padding: 100px 0px 80px 0px;
+   }
+   @media (max-width: 992px) {
+      padding: 90px 0px 80px 0px;
+   }
+   @media (max-width: 767px) {
+      padding: 60px 0px 60px 0px;
+   }
+   @media (max-width: 479px) {
+      padding: 50px 0px 40px 0px;
+   }
 
    // .practice__header
 
@@ -406,43 +421,76 @@ body {
    // .practice__body
 
    &__body {
-      margin: 0px -15px;
+      margin: 0px -20px;
       display: flex;
       flex-wrap: wrap;
+      @media (max-width: 1040px) {
+         margin: -20px -20px;
+      }
    }
 
    // .practice__column
 
    &__column {
-      padding: 0px 15px;
+      padding: 0px 20px;
       flex: 0 1 25%;
+      @media (max-width: 1040px) {
+         flex: 0 1 50%;
+         padding: 20px 20px;
+      }
+      @media (max-width: 479px) {
+         flex: 0 1 100%;
+      }
    }
 
    // .practice__item
-
-   &__item {
-      background-color: #fff;
-   }
 }
 .item-practice {
-   // .item-practice__link
+   background-color: #fff;
+   display: flex;
+   flex-direction: column;
+   height: 100%;
 
+   // .item-practice__content
+
+   &__content {
+      padding: 30px;
+      flex: 1 1 auto;
+   }
+   // .item-practice__link
    &__link {
+      color: inherit;
    }
 
    // .item-practice__title
 
    &__title {
+      margin: 0px 0px 15px 0px;
+      font-size: 16px;
+      line-height: 1.71rem;
+      font-weight: 700;
+      letter-spacing: 0.1px;
+      transition: all 0.5s;
+      &:hover {
+         letter-spacing: 0.4px;
+         transition: all 0.5s;
+      }
    }
 
    // .item-practice__text
 
    &__text {
+      line-height: calc(20 / 14 * 100%);
+      font-weight: 500;
+      color: #737373;
+      letter-spacing: 0.2px;
    }
 
    // .item-practice__image
 
    &__image {
+      display: block;
+      padding: 0px 0px 60% 0px;
    }
 }
 
